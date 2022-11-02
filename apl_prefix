@@ -1,0 +1,42 @@
+// APL Prefix "introducer" "dead key" Keyboard Layouts
+// Sets the Multi_key to be used in conjunction with the .XCompose file
+// ChromeOS does not allow multiple keylouts for a single input method, which is the typical way
+//          for Linux users to have natural language + APL keys together
+// This file defines a collection of natural language layouts and a Multi_key (compose key) prefix
+//      by default the compose key is "backtick" (grave)
+
+// A tutorial which can help with understanding these files: https://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html
+
+// Character names in 	/usr/X11/include/X11/keysymdef.h
+
+default  partial alphanumeric_keys
+xkb_symbols "ukbk" {
+    // See xkb/symbols/gb
+    
+    // With a backtick (]) prefix / dead / multi key which can be used to type APL symbols according to:
+    // ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬─────────┐
+    // │¬ ⌺ │! ⌶ │" ⍫ │£ ⍒ │$ ⍋ │% ⌽ │^ ⍉ │& ⊖ │* ⍟ │( ⍱ │) ⍲ │_ ! │+ ⌹ │Backspace│
+    // │` ⋄ │1 ¨ │2 ¯ │3 < │4 ≤ │5 = │6 ≥ │7 > │8 ≠ │9 ∨ │0 ∧ │- × │= ÷ │         │
+    // ├────┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬──────┤
+    // │Tab    │Q   │W   │E ⍷ │R   │T ⍨ │Y   │U   │I ⍸ │O ⍥ │P ⍣ │{ ⍞ │} ⍬ │Enter │
+    // │       │q ? │w ⍵ │e ∊ │r ⍴ │t ~ │y ↑ │u ↓ │i ⍳ │o ○ │p * │[ ← │] → │      │
+    // ├───────┴┬───┴┬───┴┬───┴┬───┴┬───┴┬───┴┬───┴┬───┴┬───┴┬───┴┬───┴┬───┴┐     │
+    // │Caps    │A   │S   │D   │F   │G   │H   │J ⍤ │K ⌸ │L ⌷ │: ≡ │@ ≢ │~   │     │
+    // │Lock    │a ⍺ │s ⌈ │d ⌊ │f _ │g ∇ │h ∆ │j ∘ │k ' │l ⎕ │; ⍎ │' ⍕ │#   │     │
+    // ├──────┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴────┴─────┤
+    // │Shift │| ⊣ │Z ⊆ │X   │C   │V   │B   │N   │M   │< ⍪ │> ⍙ │? ⍠ │Shift       │
+    // │      │\ ⊢ │z ⊂ │x ⊃ │c ∩ │v ∪ │b ⊥ │n ⊤ │m | │, ⍝ │. ⍀ │/ ⌿ │            │
+    // ├──────┴┬───┴─┬──┴───┬┴────┴────┴────┴────┴────┴┬───┴──┬─┴────┼─────┬──────┤
+    // │Ctrl   │Win  │Alt   │                          │Alt Gr│Win   │Menu │Ctrl  │
+    // │       │     │      │                          │      │      │     │      │
+    // └───────┴─────┴──────┴──────────────────────────┴──────┴──────┴─────┴──────┘
+    
+    include "gb"
+    name[Group1]="APL Prefix Backtick (UK)";
+    key <TLDE> { [ Multi_key ] };
+};
+
+partial alphanumeric_keys
+xkb_symbols "dkpg" {
+
+}
