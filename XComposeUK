@@ -21,7 +21,7 @@ include "%L"
 <Multi_key> <equal> : "÷"
 
 <Multi_key> <notsign> : "⌺" 
-<Multi_key> <exclaim> : "⌶" 
+<Multi_key> <exclam> : "⌶" 
 <Multi_key> <quotedbl> : "⍫" 
 <Multi_key> <sterling> : "⍒" 
 <Multi_key> <dollar> : "⍋" 
