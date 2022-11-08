@@ -10,7 +10,7 @@
 // Character names in 	/usr/X11/include/X11/keysymdef.h
 
 default  partial alphanumeric_keys
-xkb_symbols "ukbk" {
+xkb_symbols "ukbacktick" {
     // See xkb/symbols/gb
     
     // With a backtick (]) prefix / dead / multi key which can be used to type APL symbols according to:
@@ -33,10 +33,26 @@ xkb_symbols "ukbk" {
     
     include "gb"
     name[Group1]="APL Prefix Backtick (UK)";
-    key <TLDE> { [ Multi_key ] };
+    key <TLDE> { [ Multi_key ] };   // grave `, notsign ¬
 };
 
 partial alphanumeric_keys
-xkb_symbols "dkpg" {
+xkb_symbols "ukbackslash" {
+    include "gb"
+    name[Group1]="APL Prefix Backslash (UK)"
+    key <LSGT> { [ Multi_key ] };   // backslash \, bar |
+};
 
-}
+partial alphanumeric_keys
+xkb_symbols "dkonehalf" {
+    include "dk"
+    name[Group1]="APL Prefix OneHalf (DK)"
+    key <TLDE> { [ Multi_key ] };   // onehalf ½, section §
+};
+
+xkb_symbols "dkless" {
+    include "dk"
+    name[Group1]="APL Prefix LessThan (DK)"
+    key <LSGT> { [ Multi_key ] };   // less <, greater >
+};
+
