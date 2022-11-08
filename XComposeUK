@@ -29,7 +29,7 @@ include "%L"
 <Multi_key> <asciicircum> : "⍉" 
 <Multi_key> <ampersand> : "⊖" 
 <Multi_key> <asterisk> : "⍟" 
-<Multi_key> <parenleft> : "⍱" # parenleft
+<Multi_key> <parenleft> : "⍱"
 <Multi_key> <parenright> : "⍲" 
 <Multi_key> <underscore> : "!" 
 <Multi_key> <plus> : "⌹" 
