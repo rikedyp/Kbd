@@ -3,7 +3,7 @@ These files enable typing APL symbols on Linux in X11 and Wayland using the pref
 
 For example, with the APL Prefix Backtick (UK) layout, typing <kbd>\`</kbd> (backquote/backtick/grave) followed by <kbd>a</kbd> produces `⍺` (APL symbol alpha).
 
-To get a grave symbol (`), press <kbd>`</kbd> followed by <kbd>space</kbd>.
+To get the symbol used by the prefix key, press <kbd>prefix</kbd> followed by <kbd>space</kbd>. For example, on the UK backtick layout, <kbd>\` + space</kbd> gives `` ` ``.
 
 ## Install
 Copy the file `apl_prefix` into the `xkb/symbols` folder for your distribution. This is usually `/usr/share/X11/xkb/symbols`.
