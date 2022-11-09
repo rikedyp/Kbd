@@ -32,12 +32,12 @@ For these layouts to appear in the keyboard settings in GNOME Wayland:
      `gsettings set org.gnome.desktop.input-sources show-all-sources true`
 
 ## Available layouts
-|Language|Layout|Prefix Key|setxkbmap Variant|
-|---|---|---|---|
-|English|APL Prefix Backtick (UK)|<kbd>\`</kbd>|basic|
-|English|APL Prefix Backslash (UK)|<kbd>\\</kbd>|ukbackslash|
-|Danish|APL Prefix OneHalf (DK)|<kbd>½</kbd>|dkonehalf|
-|Danish|APL Prefix LessThan (DK)|<kbd>\<</kbd>|dkonehalf|
+|Language|Layout|Prefix Key|setxkbmap Variant|XCompose file|
+|---|---|---|---|---|
+|English|APL Prefix Backtick (UK)|<kbd>\`</kbd>|basic|[XComposeUK](https://raw.githubusercontent.com/rikedyp/Kbd/prefix_linux/XComposeUK)|
+|English|APL Prefix Backslash (UK)|<kbd>\\</kbd>|ukbackslash|[XComposeUK](https://raw.githubusercontent.com/rikedyp/Kbd/prefix_linux/XComposeUK)|
+|Danish|APL Prefix OneHalf (DK)|<kbd>½</kbd>|dkonehalf|[XComposeDK](https://raw.githubusercontent.com/rikedyp/Kbd/prefix_linux/XComposeDK)|
+|Danish|APL Prefix LessThan (DK)|<kbd>\<</kbd>|dkonehalf|[XComposeDK](https://raw.githubusercontent.com/rikedyp/Kbd/prefix_linux/XComposeDK)|
 
 ## TODO
 - KDE
