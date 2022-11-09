@@ -1,0 +1,33 @@
+    <layout>
+      <configItem popularity="exotic">
+        <name>apl_prefix</name>
+        <shortDescription>en apl</shortDescription>
+        <description>APL Prefix Backtick (UK)</description>
+        <languageList>
+          <iso639Id>eng</iso639Id>
+        </languageList>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem popularity="exotic">
+            <name>ukbackslash</name>
+            <shortDescription>en apl</shortDescription>
+            <description>APL Prefix Backslash (UK)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem popularity="exotic">
+            <name>dkonehalf</name>
+            <shortDescription>dk apl</shortDescription>
+            <description>APL Prefix OneHalf (DK)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem popularity="exotic">
+            <name>dkless</name>
+            <shortDescription>dk apl</shortDescription>
+            <description>APL Prefix LessThan (DK)</description>
+          </configItem>
+        </variant>
+      </variantList>
+    </layout>
