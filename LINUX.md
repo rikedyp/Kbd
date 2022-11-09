@@ -1,12 +1,14 @@
 # APL Prefix Keyboard Layouts for Linux
-These files enable typing APL symbols on Linux in X11 using the prefix (A.K.A. *introducer* or *dead*) key method.
+These files enable typing APL symbols on Linux in X11 and Wayland using the prefix (A.K.A. *introducer* or *dead*) key method.
 
-For example, in the UK layout, typing <kbd>\`</kbd> (backquote/backtick) followed by <kbd>a</kbd> produces `⍺` (APL symbol alpha).
+For example, with the APL Prefix Backtick (UK) layout, typing <kbd>\`</kbd> (backquote/backtick/grave) followed by <kbd>a</kbd> produces `⍺` (APL symbol alpha).
+
+To get a grave symbol (`), press <kbd>`</kbd> followed by <kbd>space</kbd>.
 
 ## Install
 Copy the file `apl_prefix` into the `xkb/symbols` folder for your distribution. This is usually `/usr/share/X11/xkb/symbols`.
 
-Save the file `XComposeUK` as `/home/user/.XCompose`.
+Save one of the **XCompose** files as `/home/user/.XCompose`.
 
 In X11 environments, run `setxkbmap`:
 
@@ -14,5 +16,28 @@ In X11 environments, run `setxkbmap`:
 setxkbmap apl_prefix
 ```
 
+The default layout is UK backtick prefix. Alternative languages and prefix keys are available using the `variant` modifier.
+
+```
+setxkbmap apl_prefix -variant ,dkonehalf
+```
+
 Finally, restarting an application should cause `.XCompose` to be reloaded and entering APL symbols should be possible. If that fails, try restarting your session (log out and log in again).
+
+For these layouts to appear in the keyboard settings in GNOME Wayland:
+
+1. An additional `<layout>` item must be added to `/usr/share/X11/xkb/rules/evdev.extras.xml`.
+1. Additional Keyboard layouts must be enabled, either through GNOME Tweaks, or using `gsettings` in the terminal.
+     `gsettings set org.gnome.desktop.input-sources show-all-sources true`
+
+## Available layouts
+|Language|Layout|Prefix Key|setxkbmap Variant|
+|---|---|---|---|
+|English|APL Prefix Backtick (UK)|<kbd>\`</kbd>|basic|
+|English|APL Prefix Backslash (UK)|<kbd>\</kbd>|ukbackslash|
+|Danish|APL Prefix OneHalf (DK)|<kbd>½</kbd>|dkonehalf|
+|Danish|APL Prefix LessThan (DK)|<kbd>\<</kbd>|dkonehalf|
+
+## TODO
+- KDE
 
